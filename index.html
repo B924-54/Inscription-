@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'inscription</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #238636;
+      color: white;
+      font-size: 16px;
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>Inscription</h1>
+
+    <form id="formulaire">
+      <input type="text" placeholder="Votre nom" required>
+
+      <input type="email" placeholder="Votre adresse e-mail" required>
+
+      <input type="password" placeholder="Créer un mot de passe" required>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    document.getElementById("formulaire").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("message").textContent =
+        "Inscription envoyée avec succès !";
+    });
+  </script>
+</body>
+</html>
