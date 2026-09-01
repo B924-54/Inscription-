@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - Kore Official</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #764ba2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Inscription Kore Official</h2>
+    <form id="inscriptionForm">
+      <input type="text" id="nom" placeholder="Nom" required>
+      <input type="text" id="prenom" placeholder="Prénom" required>
+      <input type="email" id="email" placeholder="Adresse Email" required>
+      <input type="tel" id="numero" placeholder="Numéro WhatsApp" required>
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      let nom = document.getElementById('nom').value;
+      let prenom = document.getElementById('prenom').value;
+      let email = document.getElementById('email').value;
+      let numero = document.getElementById('numero').value;
+      
+      // Message WhatsApp prérempli
+      let message = `Bonjour, je veux m'inscrire sur Kore Official%0A%0A` +
+                    `Nom: ${nom}%0A` +
+                    `Prénom: ${prenom}%0A` +
+                    `Email: ${email}%0A` +
+                    `Numéro: ${numero}`;
+      
+      // Remplacé 22951942192 par ton numéro
+      let lienWhatsApp = `https://wa.me/22951942192?text=${message}`;
+      
+      // Ouvre WhatsApp
+      window.open(lienWhatsApp, '_blank');
+      
+      alert("Merci pour ton inscription ! Tu vas être redirigé vers WhatsApp.");
+    });
+  </script>
+
+</body>
+</html>
