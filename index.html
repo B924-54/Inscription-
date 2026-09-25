@@ -1,93 +1,238 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription - Kore Official</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .form-container {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      width: 350px;
-    }
-    h2 {
-      text-align: center;
-      color: #667eea;
-      margin-bottom: 20px;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-sizing: border-box;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #667eea;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    button:hover {
-      background: #764ba2;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KORE OFFICIAL</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #eef5ff, #f4edff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    background: rgba(255,255,255,0.97);
+    padding: 30px 25px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 390px;
+    box-shadow: 0 15px 40px rgba(60,60,120,0.15);
+    text-align: center;
+}
+
+.logo {
+    font-size: 46px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0;
+    background: linear-gradient(90deg, #1677ff, #7b2cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.official {
+    letter-spacing: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: -3px;
+    color: #222;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 14px;
+    margin: 12px 0 22px;
+}
+
+.field {
+    position: relative;
+    margin: 10px 0;
+}
+
+.field-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border-radius: 12px;
+    border: 1px solid #d9dce5;
+    background: #f9fafc;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+select {
+    appearance: auto;
+}
+
+input:focus,
+select:focus {
+    border-color: #6b5cff;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(107,92,255,0.10);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #1677ff, #7b2cff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 14px;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(86,70,220,0.25);
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.bottom-text {
+    color: #999;
+    font-size: 12px;
+    margin-top: 18px;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="form-container">
-    <h2>Inscription Kore Official</h2>
-    <form id="inscriptionForm">
-      <input type="text" id="nom" placeholder="Nom" required>
-      <input type="text" id="prenom" placeholder="Prénom" required>
-      <input type="email" id="email" placeholder="Adresse Email" required>
-      <input type="tel" id="numero" placeholder="Numéro WhatsApp" required>
-      <button type="submit">S'inscrire</button>
-    </form>
-  </div>
+<div class="box">
 
-  <script>
-    document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      let nom = document.getElementById('nom').value;
-      let prenom = document.getElementById('prenom').value;
-      let email = document.getElementById('email').value;
-      let numero = document.getElementById('numero').value;
-      
-      // Message WhatsApp prérempli
-      let message = `Bonjour, je veux m'inscrire sur Kore Official%0A%0A` +
-                    `Nom: ${nom}%0A` +
-                    `Prénom: ${prenom}%0A` +
-                    `Email: ${email}%0A` +
-                    `Numéro: ${numero}`;
-      
-      // Remplacé 22951942192 par ton numéro
-      let lienWhatsApp = `https://wa.me/22951942192?text=${message}`;
-      
-      // Ouvre WhatsApp
-      window.open(lienWhatsApp, '_blank');
-      
-      alert("Merci pour ton inscription ! Tu vas être redirigé vers WhatsApp.");
-    });
-  </script>
+    <h1 class="logo">KORE</h1>
+    <div class="official">OFFICIAL</div>
+
+    <p class="subtitle">
+        🌍 Rejoins KORE OFFICIAL<br>
+        Choisis ton pays et inscris-toi
+    </p>
+
+    <!-- Nom -->
+    <div class="field">
+        <span class="field-icon">👤</span>
+        <input
+            type="text"
+            id="nom"
+            placeholder="Ton nom complet"
+        >
+    </div>
+
+    <!-- Pays -->
+    <div class="field">
+        <span class="field-icon">🌍</span>
+
+        <select id="pays">
+            <option value="">-- Choisis ton pays --</option>
+
+            <option value="Bénin +229">🇧🇯 Bénin</option>
+            <option value="Togo +228">🇹🇬 Togo</option>
+            <option value="Côte d'Ivoire +225">🇨🇮 Côte d'Ivoire</option>
+            <option value="Sénégal +221">🇸🇳 Sénégal</option>
+            <option value="Cameroun +237">🇨🇲 Cameroun</option>
+            <option value="Gabon +241">🇬🇦 Gabon</option>
+            <option value="Congo +242">🇨🇬 Congo</option>
+            <option value="RDC +243">🇨🇩 RDC</option>
+            <option value="Mali +223">🇲🇱 Mali</option>
+            <option value="Burkina Faso +226">🇧🇫 Burkina Faso</option>
+            <option value="Niger +227">🇳🇪 Niger</option>
+
+            <option value="Guinée Conakry +224">🇬🇳 Guinée Conakry</option>
+            <option value="Guinée-Bissau +245">🇬🇼 Guinée-Bissau</option>
+            <option value="Guinée Équatoriale +240">🇬🇶 Guinée Équatoriale</option>
+
+            <option value="Autre">🌍 Autre pays</option>
+        </select>
+    </div>
+
+    <!-- Gmail -->
+    <div class="field">
+        <span class="field-icon">📧</span>
+        <input
+            type="email"
+            id="gmail"
+            placeholder="Ton adresse Gmail"
+        >
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="field">
+        <span class="field-icon">📱</span>
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Ton numéro WhatsApp"
+        >
+    </div>
+
+    <button onclick="envoyer()">
+        💬 S'inscrire sur WhatsApp
+    </button>
+
+    <p class="bottom-text">
+        Inscription rapide • Simple • Sécurisée
+    </p>
+
+</div>
+
+<script>
+
+function envoyer() {
+
+    let nom = document.getElementById("nom").value.trim();
+    let pays = document.getElementById("pays").value;
+    let gmail = document.getElementById("gmail").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+
+    if (nom === "" || pays === "" || gmail === "" || phone === "") {
+        alert("Veuillez remplir tous les champs.");
+        return;
+    }
+
+    /* Numéro WhatsApp KORE OFFICIAL */
+    let tonNumero = "22951942182";
+
+    let message =
+        "Salut KORE OFFICIAL 👋\n\n" +
+        "📝 Nouvelle inscription\n\n" +
+        "👤 Nom : " + nom + "\n" +
+        "🌍 Pays : " + pays + "\n" +
+        "📧 Gmail : " + gmail + "\n" +
+        "📱 Numéro WhatsApp : " + phone;
+
+    let messageEncode = encodeURIComponent(message);
+
+    window.location.href =
+        "https://wa.me/" + tonNumero + "?text=" + messageEncode;
+}
+
+</script>
 
 </body>
 </html>
